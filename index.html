@@ -35,8 +35,7 @@
     <div class="container">
       <div class="mobile-header">
         <div class="mobile-header-icon left">
-          <i class="bx bx-menu" style="color: black"></i>
-        </div>
+          <i class="bx bx-menu" style="color: black" onclick="openMenu()"></i>        </div>
         <div class="mobile-header-title">
           <img src="src/images/fillo-logo.jpg" class="fillo-img" />
           fillo
@@ -45,6 +44,18 @@
           <i class="bx bxs-bell" style="color: black"></i>
         </div>
       </div>
+      <div id="mobileMenu" class="mobile-menu">
+        <i class="bx bx-x" style="color: black ;font-size: 120px" onclick="openMenu()"></i>  
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Employees</a></li>
+          <li><a href="">Devices</a></li>
+          <li><a href="">Applications</a></li>
+          <li><a href="">Orders</a></li>
+          <li><a href="">Store</a></li>
+        </ul>
+      </div>
+     
 
       <div class="sidebar">
         <div class="sidebar-header-container">
@@ -135,12 +146,11 @@
           </div>
         </div>
         <div class="background-container-button">
-
-        <div class="button-mobile-container">
-          <button class="button-mobile" id="edit-but">
-            Edit Profile<i class="bx bx-pencil" id="pencil-icon"></i>
-          </button>
-        </div>
+          <div class="button-mobile-container">
+            <button class="button-mobile" id="edit-but">
+              Edit Profile<i class="bx bx-pencil" id="pencil-icon"></i>
+            </button>
+          </div>
         </div>
         <div class="background-container">
           <div class="main-container1">
