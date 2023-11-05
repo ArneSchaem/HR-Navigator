@@ -28,7 +28,6 @@ html {
   box-shadow: 3px rgba(249, 250, 250, 0.1);
 }
 
-
 #icon {
   font-size: 25px;
   align-items: center;
@@ -152,6 +151,7 @@ html {
   align-items: center;
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 0;
 }
 .header-container {
   margin-right: 20px;
@@ -583,38 +583,59 @@ div.item {
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  transform: translateX(-100%); 
   background-color: white;
-  z-index: 10; 
-}
-.mobile-menu.show {
-  display: block;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  transition: transform 0.3s ease; 
 }
 
+.mobile-menu.show {
+  transform: translateX(0%); 
+}
+.mobile-menu .bx-x {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  font-size: 30px; 
+  padding: 10px; 
+  margin-left: 8px;
+  z-index: 12;
+}
 .mobile-menu ul {
   list-style-type: none;
   padding: 0;
+  margin: 0; 
+  text-align: center;
+  width: 100%;
 }
 
 .mobile-menu ul li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+  padding: 20px;
 }
 
 .mobile-menu ul li a {
   color: #333;
   text-decoration: none;
   display: block;
+  font-size: 20px; 
+
 }
+
 @media (max-width: 500px) {
   .mobile-nav {
     display: block;
   }
+
+
   .background-container2 {
     height: auto;
     background-color: #ffffff;
